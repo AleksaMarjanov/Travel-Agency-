@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="styles.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
 
 
 <body>
-
+    
     <nav>
         <ul class="nav-links">
             <li><a href="./index.html">Home</a></li>
@@ -26,9 +27,10 @@
             <div class="line3"></div>
         </div>
     </nav>
-
-    <script src="index.js"></script>
-    <br>
+    <div class="page-container">
+        <div class="content-wrap">
+    <h2 class="contact"> Contact Us </h2>
+    
     <table>
         <tr>
             <th>Site</th>
@@ -50,15 +52,28 @@
     </table>
 
 
-    <h3>Want to check for avaliable spots? Contact us</h3>
-    <input type="text" name="firstName" placeholder="First Name"><br>
-    <input type="text" name="lastName" placeholder="Last Name"><br>
-    <input type="text" name="emailAddres" placeholder="Enter your email address"><br>
-    <input type="text" name="phone" placeholder="Phone number"><br>
-    <div class="button">
-        <button onclick="mssg()">Submit</button>
-    </div>
+<section class="section">
+   <p>Do you want to <strong>check </strong> for <strong> Available</strong> spots?</p>
+    <div class="input"></div>
+    <form>
 
+        <input type="text" name="firstName" placeholder="First Name" value><br>
+        <input type="text" name="lastName" placeholder="Last Name" valur><br>
+        <input type="text" name="emailAddress" placeholder="Enter your email address" value><br>
+        <input type="text" name="phone" placeholder="Phone number" value><br>
+        <textarea name="body" id="body" placeholder="Please include any relevant details with your request. Dates, times, location, etc." rows="10"></textarea>
+        <button type="submit" onclick="mssg()" class="btn">Submit</button>
+        
+    </form>
+</div>
+</section>
+</div>
+
+<footer id="footer">
+    All Right Reserved Aleksa Marjanov &#9400; 2022
+ </footer>
+</div>
 </body>
+
 
 </html>
