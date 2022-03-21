@@ -2,19 +2,51 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  text-align: center;
+  /* text-align: center; */
+}
+
+div {
+  display: block;
+}
+html,
+body {
+  padding-top: 100px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.main {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .page-container {
-  position: relative;
   min-height: 100%;
 }
 
 .content-wrap {
-  padding-bottom: 2.5rem;
+  overflow: auto;
+  padding-bottom: 50px;
 }
 
 nav {
+  z-index: 1;
+  position: absolute;
   top: 0;
   width: 100%;
   display: flex;
@@ -119,6 +151,8 @@ nav {
 
 /* Styling table */
 table {
+  justify-content: center;
+  align-items: center;
   padding-top: 30%;
   border-collapse: collapse;
   width: 100%;
@@ -144,6 +178,8 @@ tr:hover {
   height: 500px;
   width: 800px;
   position: relative;
+  /* margin-top: 400px; */
+  margin-bottom: 5rem;
 }
 
 .image-container img {
@@ -168,20 +204,22 @@ tr:hover {
 .wrapper,
 .contact,
 .title {
+  z-index: 2;
+  display: block;
+  padding-top: 2%;
   font-family: "Poppins", sans-serif;
-  color: white;
-  text-shadow: 0.1em 0.1em 0.2em #000;
+  color: black;
+  text-shadow: 0.1em 0.1em 0.2em rgb(206, 193, 193);
   padding: 2%;
   margin: 0 auto;
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgb(116, 116, 116);
+  background-color: white;
 }
 
 .wrapper {
-  padding-top: 8%;
-  height: 450px;
+  height: 100%;
   font-size: 20px;
 }
 .wrapper h2 {
@@ -192,19 +230,17 @@ tr:hover {
   font-size: 20px;
 }
 .contact {
-  padding-top: 8%;
   font-size: 35px;
-  height: 300px;
+  height: 100%;
 }
 .title {
   font-size: 25px;
-  padding-top: 6%;
-  height: 300px;
+  height: 100%;
 }
 
 .section {
-  position: relative;
-  padding: 20px 0;
+  /* position: relative; */
+  padding: 2rem 0;
   left: 3rem;
   right: 3rem;
   text-align: center;
@@ -219,49 +255,22 @@ tr:hover {
 .section {
   display: block;
 }
-/* Contact page forms */
-.forms {
-  margin-top: 3rem;
-  text-align: center;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-}
-/* footer {
-  padding: 10px;
-  background-color: #009578;
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  width: 100%;
-  bottom: 0;
-  font-size: 17px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-}
- */
 
 #footer {
   background-color: #009578;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem; /* Footer height */
-}
-
-.images {
-  padding-top: 5%;
-  background-color: white;
-}
-.images:hover {
-  color: #afafaf;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 50px;
+  margin-top: -50px;
+  clear: both;
 }
 
 input,
 textarea {
   background-color: #eee;
   border: none;
-  border-radius: 100px;
+  border-radius: 70px;
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
   margin-top: 1rem;
@@ -269,6 +278,37 @@ textarea {
   width: 100%;
 }
 
+input[type="text" i] {
+  padding: 1px 2px;
+}
+
+input {
+  writing-mode: horizontal-tb !important;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  margin: 0em;
+  padding: 3px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+form {
+  display: block;
+  margin: 0em;
+}
 .btn,
 a.btn {
   background-color: #de5254;
@@ -301,7 +341,7 @@ a.btn:hover {
   transform: translateY(-1px);
 }
 
-/* button {
+button {
   appearance: auto;
   writing-mode: horizontal-tb !important;
   text-rendering: auto;
@@ -314,4 +354,20 @@ a.btn:hover {
   align-items: flex-start;
   cursor: default;
   margin: 0em;
-} */
+}
+
+hr {
+  border-top: 1px solid #eee;
+  margin-bottom: 30px;
+}
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
