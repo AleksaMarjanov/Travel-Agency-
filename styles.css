@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  /* text-align: center; */
+  text-align: center;
 }
 
 div {
@@ -44,6 +44,7 @@ img {
   overflow: auto;
   padding-bottom: 50px;
 }
+
 nav {
   z-index: 1;
   margin-right: 0px;
@@ -215,7 +216,6 @@ tr:hover {
 .wrapper,
 .contact,
 .title {
-  z-index: 2;
   display: block;
   padding-top: 2%;
   font-family: "Poppins", sans-serif;
@@ -253,10 +253,7 @@ tr:hover {
 }
 
 .section {
-  position: relative;
   padding: 2rem 0;
-  left: 3rem;
-  right: 3rem;
   text-align: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
@@ -274,14 +271,24 @@ tr:hover {
   background-color: #009578;
   text-align: center;
   color: white;
-  height: 50px;
-  margin-top: -50px;
+  height: 30px;
+  margin-top: -30px;
   clear: both;
   position: sticky;
   top: 100%;
 }
 
-input,
+input {
+  background-color: #eee;
+  border: none;
+  border-radius: 70px;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  padding: 1.6rem 2rem;
+  width: 80%;
+}
+
 textarea {
   background-color: #eee;
   border: none;
@@ -290,10 +297,10 @@ textarea {
   margin-bottom: 1.5rem;
   margin-top: 1rem;
   padding: 1.6rem 2rem;
-  width: 100%;
+  width: 80%;
 }
 
-/* input {
+input {
   writing-mode: horizontal-tb !important;
   color: -internal-light-dark(black, white);
   letter-spacing: normal;
@@ -308,17 +315,22 @@ textarea {
   -webkit-rtl-ordering: logical;
   cursor: text;
   background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-  margin: 0em;
-  padding: 3px 2px;
   border-width: 2px;
   border-style: inset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
-} */
+}
 
+@media (max-width: 768px) {
+  textarea,
+  input {
+    width: 80%;
+  }
+}
 form {
   display: block;
   margin: 0em;
+  margin-bottom: 60px;
 }
 .btn,
 a.btn {
