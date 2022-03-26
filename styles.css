@@ -10,6 +10,7 @@ div {
 }
 html,
 body {
+  position: relative;
   text-align: center;
   padding-top: 100px;
   min-height: 100vh;
@@ -276,6 +277,25 @@ tr:hover {
   clear: both;
   position: sticky;
   top: 100%;
+}
+
+#footerAbout {
+  background-color: #009578;
+  text-align: center;
+  padding-bottom: 1em;
+  color: white;
+  height: 30px;
+  margin-top: -30px;
+  clear: both;
+  position: sticky;
+  top: 100%;
+}
+
+.AboutBody {
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 input {
